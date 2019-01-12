@@ -1,0 +1,11 @@
+{
+  "name": "demofeedback",
+  "version": "1.0.0",
+  "description": "a tool for getting student feedback in realtime while giving coding demos and lectures!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ben moren",
+  "license": "MIT"
+}
