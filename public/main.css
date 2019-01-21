@@ -18,10 +18,32 @@ body{
   padding: 1vw;
   width:320px;
   /* height:480px; */
+  /* text-align: center; */
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-h1{font-size: 1.5em;}
+div{
+  margin-bottom:3vh;
+}
+
+h1{
+  font-size: 1.5em;
+  margin:0px;
+}
+
+button{
+  background: none;
+  color: white;
+  border: 1px solid white;
+  font-size: .5em;
+  padding:1em;
+}
+
+button:active{
+  background: white;
+  color: rgb(29, 46, 158);
+
+}
