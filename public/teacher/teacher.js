@@ -47,6 +47,10 @@ socket.on('reportNumConnections',(connectionCount)=>{
 
 $('#clearStudents').on('click',(e)=>{
   socket.emit('clearStudentStatus')
+  
+  //clear teacher view too
+  $('#paceStatus').html('')
+  $('#breakStatus').html('')
 
 })
 
