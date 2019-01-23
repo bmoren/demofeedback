@@ -40,7 +40,9 @@ socket.on('clearStatus', (data)=>{
 
   // reset the display
   $('#paceRange').val( 5 );
+  student.paceRange = 5;
   $('#breakCheck').prop('checked', false);
+  student.breakCheck = false;
 
   console.log($('#paceRange').val());
 
