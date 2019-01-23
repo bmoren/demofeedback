@@ -1,13 +1,14 @@
 let socket = io.connect();
 
 //the student object, send this to the server when things get updated, it gets attached to the socket on the server.
-let studentInit = {
+
+let student = {
   'paceRange': 5,
   'breakCheck': false
 }
 
-//do some temp sotrage so we can reset easily later
-let student = studentInit;
+console.log(student);
+
 
 socket.on('connect', function(data){
   console.log("we connected to the server as" + socket.id)
@@ -35,16 +36,20 @@ $('#breakCheck').on('change', (e)=>{
 
 //recieve message from teacher to reset status (useful after taking a break)
 socket.on('clearStatus', (data)=>{
-  //reset the object
-  student = studentInit ;
 
   // reset the display
   $('#paceRange').val( 5 );
-  student.paceRange = 5;
   $('#breakCheck').prop('checked', false);
-  student.breakCheck = false;
 
-  console.log($('#paceRange').val());
+  //reset the object
+  // console.log("pre",student);
+  student = {
+    'paceRange': 5,
+    'breakCheck': false
+  }
+  // console.log("post",student);
+
+  // console.log($('#paceRange').val());
 
   //update the status
   socket.emit('updateStudentStatus', student )
